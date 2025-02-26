@@ -1,0 +1,72 @@
+.shadow-specific {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.MyCustomTable table tr:last-child td:first-child:lang(fa) { 
+  border-bottom-right-radius: .75rem;
+}
+  
+.MyCustomTable table tr:last-child .Last-col:lang(fa) {
+  border-bottom-left-radius: .75rem;
+}
+
+.MyCustomTable table th:first-child:lang(fa){
+  border-top-right-radius: .75rem;
+}
+.MyCustomTable table th:last-child:lang(fa){
+  border-top-left-radius: .75rem;
+}
+.MyCustomTable table tr:last-child td:first-child:lang(en) { 
+  border-bottom-left-radius: .75rem;
+}
+  
+.MyCustomTable table tr:last-child .Last-col:lang(en) {
+  border-bottom-right-radius: .75rem;
+}
+
+.MyCustomTable table th:first-child:lang(en){
+  border-top-left-radius: .75rem;
+}
+.MyCustomTable table th:last-child:lang(en){
+  border-top-right-radius: .75rem;
+}
+
+.MyCustomTable {
+  max-height: 450px;
+  @apply relative overflow-x-auto ;
+}
+
+.MyCustomTable table {
+  min-width: 100%; /* Ensure the table takes up the full width of its container */
+  @apply w-full border-collapse;
+}
+
+.MyCustomTable table thead {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  @apply bg-gradient-to-r from-blue-500 to-blue-600  text-white;
+}
+
+.MyCustomTable table thead tr th {
+  @apply px-4 py-3 text-center min-w-20 text-sm font-semibold tracking-wide cursor-pointer select-none hover:bg-blue-700 transition;
+}
+
+.MyCustomTable table thead tr th.fixed-column {
+  @apply px-4 py-3 text-center min-w-20 text-sm font-semibold tracking-wide cursor-pointer select-none hover:bg-blue-700 transition sticky left-0 bg-gradient-to-r from-blue-600 to-blue-700 z-10;
+}
+
+.MyCustomTable table tbody tr {
+  @apply border-b text-center border-gray-200 hover:bg-gray-50 transition;
+}
+
+.MyCustomTable table tbody tr td {
+  @apply px-8 py-3 min-w-24 text-sm bg-white text-gray-700 whitespace-nowrap;
+}
+
+.MyCustomTable table tbody tr td.Last-col {
+  @apply px-4 py-3 min-w-24 text-sm text-gray-700 whitespace-nowrap sticky left-0 bg-white shadow-sm z-10; /* Changed to sticky right-0 */
+}
+.SearchInput{
+  @apply border border-gray-300 text-black px-3 py-2 rounded-md text-sm focus:outline-none;
+}
